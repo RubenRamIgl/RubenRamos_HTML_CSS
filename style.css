@@ -1,0 +1,430 @@
+/* Body principales y pantallas de usuario*/
+body {
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina padding por defecto */
+    width: 100%; /* Asegura que el ancho sea 100% del viewport */
+    overflow-x: hidden; /* Elimina el scrollbar horizontal */
+    overflow-y: hidden;
+}
+
+/* Body pantallas de las cazadoras*/
+.bodyChaquetas{
+    width: 100%; /* Asegura que el ancho sea 100% del viewport */
+    overflow-x: visible; /* Elimina el scrollbar horizontal */
+    align-items: start;
+}
+
+/* ordenar y filtrado de las clases de las cazadoras */
+.sort, .filter {
+    display: flex; /* Hace que los elementos se organicen en línea */
+    align-items: center;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #000; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+}
+
+/* Header de las principales y las zonas de compra*/
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuye los elementos entre los extremos */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    padding: 10px 20px; /* Espaciado alrededor */
+    width: 100%; /* Hace que el contenedor ocupe todo el ancho */
+    max-width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra por debajo */
+    box-sizing: border-box; /* Asegura que padding no afecte al tamaño total */
+}
+
+/* Iconos de todos las clases */
+.icons {
+    display: flex; /* Organiza los iconos en una fila */
+    gap: 20px; /* Espacio entre los iconos */
+    align-items: center; /* Centra los iconos verticalmente */
+    margin-left: auto;
+}
+
+/* 
+Clase index 
+*/
+
+/*Distribución de hombre y mujer*/
+.generos {
+    display: flex; /* Usa flexbox para organizar los elementos en fila */
+    justify-content: space-between; /* Distribuye los elementos entre los dos extremos */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    padding: 0 20px; /* Espaciado alrededor */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    margin-top: 24px; /* Reduce el espacio entre el header y los textos */
+    max-width: 100%;
+    box-sizing: border-box; /* Incluye padding dentro del ancho total */
+    text-decoration: none;
+}
+
+.generos p {
+    font-family: 'Montserrat';
+    color: #000;
+    font-size: 20px; /* Tamaño de fuente */
+    margin: 0; /* Elimina márgenes para evitar espacio adicional */
+    flex-grow: 1; /* Permite que los textos crezcan para ocupar el espacio disponible */
+    text-align: center; /* Centra el texto en su contenedor */
+}
+
+/* Imagen de las pantallas principales */
+.rectangle{
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 50vh; /* Ajusta la altura para evitar el desbordamiento */
+    object-fit: cover;
+    margin-top: 10px;
+    overflow: hidden; /* Elimina cualquier contenido que se desborde */
+}
+
+/* Footer de las pantallas principales */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea verticalmente desde el inicio */
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); /* Sombra hacia arriba */
+    margin-top: 50px; /* Espacio adicional entre la imagen central y el footer */
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los elementos dentro de cada columna */
+}
+
+.footer-column p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0; /* Elimina los márgenes adicionales */
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px; /* Espacio entre los iconos */
+    align-items: center;
+}
+
+/*
+Clase inicioSesion
+*/
+
+/* Header del inicio de sesion */
+.headerSesion{
+    width: 100%;
+    display: flex; /* Usamos flexbox para alinear el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Texto de iniciar sesión */
+.iniciarSesion{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+/* Botón iniciar */
+.iniciar{
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño del texto */
+    color: white; /* Texto en blanco */
+    background-color: black; /* Fondo negro */
+    border: none; /* Sin borde adicional */
+    border-radius: 25px; /* Bordes completamente redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.iniciar:hover{
+    background-color: #333; /* Cambia a un negro más claro al pasar el ratón */
+}
+
+.iniciar:active {
+    background-color: #555; /* Cambia el color al hacer clic */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño para dar un efecto de clic */
+}
+
+/* Texto que redirige al registro */
+.noRegistrado{
+    font-weight: bold;
+}
+
+.registrateLink{
+    color: #000;
+}
+
+/* 
+Clase registro 
+*/
+
+/* Header del registro */
+.headerRegistro{
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    display: flex; /* Usamos flexbox para alinear el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Texto Regístrate */
+.registrate{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+/* Texto e icono de volver */
+.volver {
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    text-decoration: none;
+    right: 20px; /* Ajusta la posición de "Volver" a la izquierda */
+}
+
+/* Disposición del formulario */
+.formulario{
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    gap: 10px; /* Espaciado entre los elementos */
+    align-items: center; /* Centra horizontalmente los elementos */
+    justify-content: center; /* Centra verticalmente el formulario */
+    margin: 0; /* Elimina márgenes */
+}
+
+/* Bordes  y separación de los elementos */
+input{
+    border: 2px solid #000; /* Borde más ancho con color negro */
+    border-radius: 4px; /* Opcional: bordes ligeramente redondeados */
+    width: 30%;
+    height: 30px;
+}
+
+/* Botón aceptar */
+.aceptar{
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño del texto */
+    color: white; /* Texto en blanco */
+    background-color: black; /* Fondo negro */
+    border: none; /* Sin borde adicional */
+    border-radius: 25px; /* Bordes completamente redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.aceptar:hover{
+    background-color: #333; /* Cambia a un negro más claro al pasar el ratón */
+}
+
+.aceptar:active {
+    background-color: #555; /* Cambia el color al hacer clic */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño para dar un efecto de clic */
+}
+
+/* Centra el elemento que haya en el centro */
+.central {
+    display: flex; /* Coloca "Sort by" y "Filter" en fila */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 40px; /* Espaciado entre "Sort by" y "Filter" */
+    flex-grow: 1; /* Permite que esta sección ocupe el espacio central */
+    justify-content: center; /* Centra los elementos dentro del espacio disponible */
+}
+
+/* Header de la clase usuario */
+.headerUsuario {
+    display: flex; /* Usamos flexbox para distribuir los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alineamos los elementos verticalmente */
+    padding: 15px 20px; /* Espaciado interno */
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    background-color: white; /* Fondo blanco */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Icono de la imagen de usuario */
+.principalUsuario img {
+    position: relative;  /* Necesario para usar left */
+    left: -35px; /* Ajusta este valor para mover el logo hacia la izquierda */
+    height: auto;
+}
+
+/* Opciones de la pantalla de usuario */
+.opciones{
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    gap: 10px; /* Espaciado entre los elementos */
+    align-items: center; /* Centra horizontalmente los elementos */
+    justify-content: center; /* Centra verticalmente el formulario */
+    margin: 0; /* Elimina márgenes */
+}
+
+.cerrarSesion{
+    text-decoration: none;
+    color: #000;
+}
+
+/*
+Clases de las cazadoras (Hombre y Mujer)
+*/
+
+ /* Titulo de la sección donde te encuentras (Hombre o Mujer) */
+ .titulo {
+    display: flex; /* Usa Flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 20px; /* Espaciado superior respecto al header */
+}
+
+.titulo p {
+    font-family: 'Montserrat';
+    font-size: 24px; /* Tamaño de la fuente */
+    color: #000; /* Color negro */
+    margin: 0; /* Elimina márgenes adicionales */
+    text-align: center; /* Asegura que esté centrado */
+}
+
+/* Contenedor de chaquetas */
+.chaquetas-container {
+    display: flex; /* Usa flexbox para alinear las chaquetas horizontalmente */
+    gap: 100px; /* Espacio entre los elementos */
+    width: max-content;
+    flex-wrap: nowrap;
+    padding: 20px 0; /* Espaciado superior e inferior */
+    scroll-snap-type: x mandatory; /* Para un desplazamiento más suave y controlado */
+}
+
+/* Estilo de cada chaqueta */
+.chaqueta {
+    display: flex;
+    flex-direction: column; /* Los elementos de cada chaqueta estarán en columna */
+    align-items: center; /* Centra los elementos */
+    width: 200px; /* Ancho fijo para cada chaqueta */
+    scroll-snap-align: start; /* Alinea cada chaqueta al inicio del contenedor */
+}
+
+/* Imagen de la chaqueta */
+.chaqueta-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+/* Información de la chaqueta (nombre, precio y corazón) */
+.chaqueta-info {
+    display: flex; /* Usa flexbox para alinear los elementos en fila */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    margin-top: 10px;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/* Nombre de la chaqueta */
+.chaqueta-name {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left; /* Alinea el nombre a la izquierda */
+    flex-grow: 1; /* Permite que el nombre crezca y ocupe el espacio disponible */
+}
+
+/* Precio de la chaqueta */
+.chaqueta-price {
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Alinea el precio a la izquierda */
+    margin-right: 10px; /* Añade un pequeño espacio entre el precio y el corazón */
+}
+
+.chaqueta:active {
+    background-color: #555; /* Cambia el color al hacer clic */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño para dar un efecto de clic */
+}
+
+/* Icono del corazón */
+.chaqueta-heart {
+    width: 24px;
+    height: 24px;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.realizarCompra{
+    text-decoration: none;
+    color: #000;
+}
+
+/* Clase compraWeb */
+.contenedorCompra{
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    gap: 10px; /* Espaciado entre los elementos */
+    align-items: center; /* Centra horizontalmente los elementos */
+    justify-content: center; /* Centra verticalmente el formulario */
+    margin: 0; /* Elimina márgenes */
+
+}
+
+/*Bloque de la imagen e información de la cazadora */
+.chaquetaCompra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; /* Tamaño fijo de la chaqueta */
+    margin-top: 50px;
+}
+
+.chaqueta-info-compra {
+    display: flex; /* Usa flexbox para alinear los elementos en fila */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    margin-top: 10px;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+/*Bloque para el botón de añadir al carrito y ver los detalles */
+.opcionesCompra{
+    display: flex;
+    flex-direction: column; /* Botones en columna */
+    align-items:center; /* Alinea los botones a la izquierda */
+    gap: 20px; /* Espacio entre los botones */
+    padding: 10px;
+    max-width: 300px; /* Ancho máximo de la columna */
+    right: 50%;
+}
+
+.añadir{
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño del texto */
+    color: white; /* Texto en blanco */
+    background-color: black; /* Fondo negro */
+    border: none; /* Sin borde adicional */
+    border-radius: 25px; /* Bordes completamente redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.añadir:hover{
+    background-color: #333; /* Cambia a un negro más claro al pasar el ratón */
+}
+
+.añadir:active {
+    background-color: #555; /* Cambia el color al hacer clic */
+    transform: scale(0.95); /* Reduce ligeramente el tamaño para dar un efecto de clic */
+}
+
+/* Clase api */
+.detalles {
+    display: inline-flex; /* Coloca el texto y el ícono en línea */
+    align-items: center; /* Alinea verticalmente */
+    gap: 5px; /* Espacio entre el texto y el ícono */
+    color: #000;
+    text-decoration: none; /* Quita el subrayado */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar */
+}
